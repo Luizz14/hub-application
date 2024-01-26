@@ -9,6 +9,8 @@ export default function Layout() {
   const [loaded] = useFonts({
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
     InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
+    Minecraft: require('../assets/fonts/Minecraft.ttf'),
+    Arcade: require('../assets/fonts/Arcade.ttf'),
   });
 
   useEffect(() => {
@@ -21,7 +23,11 @@ export default function Layout() {
 
   return (
     <TamaguiProvider config={config}>
-      <Stack />
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      />
     </TamaguiProvider>
   );
 }
