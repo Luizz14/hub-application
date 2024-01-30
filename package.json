@@ -2,9 +2,9 @@
   "name": "hub-application",
   "version": "1.0.0",
   "scripts": {
-    "android": "expo start --android",
+    "android": "expo run:android",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
-    "ios": "expo start --ios",
+    "ios": "expo run:ios",
     "start": "expo start",
     "web": "expo start --web"
   },
@@ -39,7 +39,8 @@
     "react-native-screens": "~3.22.0",
     "react-native-url-polyfill": "^2.0.0",
     "react-native-web": "~0.19.6",
-    "tamagui": "1.74.8"
+    "tamagui": "1.74.8",
+    "expo-splash-screen": "~0.20.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -57,12 +58,10 @@
     "extends": "universe/native"
   },
   "resolutions": {
-    "react-refresh": "~0.14.0",
-    "expo-modules-core": "~1.11.0"
+    "react-refresh": "~0.14.0"
   },
   "overrides": {
-    "react-refresh": "~0.14.0",
-    "expo-modules-core": "~1.11.0"
+    "react-refresh": "~0.14.0"
   },
   "expo": {
     "install": {

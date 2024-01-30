@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { TamaguiProvider } from 'tamagui';
 
 import config from '../tamagui.config';
+import { StatusBar } from 'expo-status-bar';
 
 export default function Layout() {
   const [loaded] = useFonts({
@@ -23,6 +24,7 @@ export default function Layout() {
 
   return (
     <TamaguiProvider config={config}>
+      <StatusBar hidden />
       <Stack
         screenOptions={{
           headerShown: false,

@@ -19,9 +19,9 @@ export function ClockTimeCard() {
 
   return (
     <Link href={'/clock'} asChild>
-      <TouchableOpacity activeOpacity={0.7}>
+      <TouchableOpacity activeOpacity={0.7} className="my-4">
         <BlurView
-          intensity={10}
+          intensity={30}
           tint="dark"
           className="p-8 rounded-lg overflow-hidden border-[1px] border-gray-800 items-center">
           <Text className="text-gray-200 text-6xl font-semibold font-minecraft">{time}</Text>
