@@ -8,10 +8,7 @@ export function MusicCard() {
   return (
     <Link href={'/'} asChild>
       <TouchableOpacity activeOpacity={0.7} className="my-4">
-        <BlurView
-          intensity={30}
-          tint="dark"
-          className="p-8 px-6 rounded-lg overflow-hidden border-[1px] border-gray-800 items-center space-y-5">
+        <View className="p-8 px-6 rounded-lg overflow-hidden border-[1px] border-gray-800 items-center space-y-5">
           <View className="flex-row space-x-3 w-full justify-between">
             <View className="flex-row space-x-3">
               <Image
@@ -54,7 +51,7 @@ export function MusicCard() {
               </TouchableOpacity>
             </View>
           </View>
-        </BlurView>
+        </View>
       </TouchableOpacity>
     </Link>
   );

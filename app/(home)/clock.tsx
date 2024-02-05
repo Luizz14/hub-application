@@ -19,11 +19,11 @@ export default function Clock() {
     if (showHeader) return setShowHeader(false);
     setShowHeader(true);
 
-    const timer = setTimeout(() => {
-      setShowHeader(false);
-    }, 3000);
+    // const timer = setTimeout(() => {
+    //   setShowHeader(false);
+    // }, 3000);
 
-    return () => clearTimeout(timer);
+    // return () => clearTimeout(timer);
   }
 
   useEffect(() => {
@@ -52,21 +52,21 @@ export default function Clock() {
       <Animated.View
         layout={Layout.stiffness(100)}
         className="h-full pt-[60px] items-center space-y-0">
-        {showHeader && <ClockHeader />}
+        <ClockHeader showHeader={showHeader} />
 
         <Animated.View
           layout={Layout.damping(20)}
           className="my-10 pt-10 w-full justify-center items-center"
           onTouchStart={() => handleShowHeader()}>
-          <Text className="text-gray-200 text-9xl font-minecraft -mb-16">{hour}</Text>
-          <Text className="text-gray-200 text-9xl -my-2 -ml-1 font-minecraft">. .</Text>
-          <Text className="text-gray-200 text-9xl font-minecraft">{minutes}</Text>
-          <BlurView
+          <Text className="text-gray-200 text-[156px] font-minecraft -mb-24">{hour}</Text>
+          <Text className="text-gray-200 text-[156px] -my-2 -ml-1 font-minecraft">. .</Text>
+          <Text className="text-gray-200 text-[156px] font-minecraft">{minutes}</Text>
+          {/* <BlurView
             tint="dark"
             intensity={20}
-            className="p-2 rounded-lg overflow-hidden items-center justify-center">
-            <Text className="text-gray-400 text-xl font-minecraft">{date}</Text>
-          </BlurView>
+            className="p-2 rounded-lg overflow-hidden items-center justify-center"> */}
+          <Text className="text-gray-400 text-xl font-minecraft">{date}</Text>
+          {/* </BlurView> */}
         </Animated.View>
       </Animated.View>
     </View>

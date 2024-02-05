@@ -20,13 +20,15 @@ export function ClockTimeCard() {
   return (
     <Link href={'/clock'} asChild>
       <TouchableOpacity activeOpacity={0.7} className="my-4">
-        <BlurView
+        <View className="p-8 rounded-lg overflow-hidden border-[1px] border-gray-800 items-center">
+          <Text className="text-gray-200 text-6xl font-semibold font-minecraft">{time}</Text>
+          <Text className="text-gray-400 font-minecraft text-md">{date}</Text>
+        </View>
+        {/* <BlurView
           intensity={30}
           tint="dark"
           className="p-8 rounded-lg overflow-hidden border-[1px] border-gray-800 items-center">
-          <Text className="text-gray-200 text-6xl font-semibold font-minecraft">{time}</Text>
-          <Text className="text-gray-400 font-minecraft text-md">{date}</Text>
-        </BlurView>
+        </BlurView> */}
       </TouchableOpacity>
     </Link>
   );
